@@ -5,6 +5,7 @@ function App() {
   const [game, setGame] = useState(Array(9).fill(''));
   const [currentPlayer, setCurrentPlayer] = useState('X');
   const [winner, setWinner] = useState(false);
+  const [endGame, setEndGame] = useState(false);
   const [pointsP1, setPointsP1] = useState(0);
   const [pointsP2, setPointsP2] = useState(0);
   const [tie, setTie] = useState(0);
@@ -30,6 +31,14 @@ function App() {
       });
     }
     checkWinner();
+    
+    const checkDraw = () => {
+      if (game.every((square) => square)) {
+        setTie((prevState) => prevState + 1);
+        setEndGame(true);
+      }
+    }
+    checkDraw();
   }, [game]);
 
   useEffect(() => {
@@ -68,16 +77,16 @@ function App() {
         })}
       </main>
       <footer>
-        <div>
-          <p className="p1">PLAYER1 (X)</p>
+        <div className={`${currentPlayer === 'X' && 'white'}  ${(winner || endGame) && 'white'}`}>
+          <p>PLAYER1 (X)</p>
           <p>{pointsP1}</p>
         </div>
-        <div>
-          <p className="tie">TIE</p>
+        <div className={`${(winner || endGame) && 'white'}`}>
+          <p>TIE</p>
           <p>{tie}</p>
         </div>
-        <div>
-          <p className="p2">PLAYER2 (O)</p>
+        <div className={`${currentPlayer === 'O' && 'white'}  ${(winner || endGame) && 'white'}`}>
+          <p>PLAYER2 (O)</p>
           <p>{pointsP2}</p>
         </div>
       </footer>

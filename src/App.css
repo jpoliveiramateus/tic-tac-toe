@@ -3,6 +3,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  background-color: black;
+  color: white;
 }
 
 .game {
@@ -17,9 +20,6 @@
   
   height: auto;
   font-size : 90px;
-
-  background-color: white;
-  color: black;
 }
 
 .square {
@@ -29,7 +29,7 @@
 
   height: 100px;
   width: 100px;
-  border: 3px solid black;
+  border: 3px solid white;
 }
 
 .square:nth-child(1) {
@@ -73,6 +73,7 @@ footer {
   justify-content: center;
 
   gap: 1rem;
+  color: #808080;
 }
 
 footer div {
@@ -83,4 +84,8 @@ footer div {
 
 footer div p:last-child {
   margin-top: -2px;
+}
+
+.white {
+  color: white;
 }
