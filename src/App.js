@@ -59,6 +59,12 @@ function App() {
       setGame(game.map((square, squareIndex) => squareIndex === index ? currentPlayer : square));
       currentPlayer === 'X' ? setCurrentPlayer('O') : setCurrentPlayer('X');
     }
+
+    if (winner || endGame) {
+      setGame(Array(9).fill(''));
+      setWinner(false);
+      setEndGame(false);
+    }
   }
 
   return (
