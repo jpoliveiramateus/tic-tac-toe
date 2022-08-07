@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { useEffect, useState } from 'react';
 import TicTacToeContext from '../context/Context';
+import Square from './Square';
 
 function TicTacToe() {
   const [game, setGame] = useState(Array(9).fill(''));
@@ -70,14 +71,12 @@ function TicTacToe() {
     <main className="game">
       {game.map((square, index) => {
         return (
-          <div
+          <Square
             key={ `square ${index}` }
-            className={ `square ${index}` }
-            onClick={ () => handleClick(index, square) }
-            data-testid={ `square ${index}` }
-          >
-            {square}
-          </div>
+            index={ index }
+            square={ square }
+            handleClick={ handleClick }
+          />
         );
       })}
     </main>
