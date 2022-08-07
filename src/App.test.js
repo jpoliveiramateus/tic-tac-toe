@@ -195,7 +195,7 @@ describe('test game tic-tac-toe', () => {
     expect(screen.getByTestId('points-tie')).toHaveTextContent('0');
   });
 
-  it('Is possible to win on the last move' , () => {
+  it('is possible to win on the last move' , () => {
     render(<App />);
     expect(screen.getByTestId('points-p1')).toHaveTextContent('0');
     expect(screen.getByTestId('points-p2')).toHaveTextContent('0');
