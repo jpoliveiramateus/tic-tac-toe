@@ -205,7 +205,7 @@ describe('test game tic-tac-toe', () => {
     winOnTheLastMove.forEach((index) => {
       userEvent.click(screen.getByTestId(`square ${index}`));
     });
-    
+
     expect(screen.getByTestId('points-p1')).toHaveTextContent('1');
     expect(screen.getByTestId('points-p2')).toHaveTextContent('0');
     expect(screen.getByTestId('points-tie')).toHaveTextContent('0');

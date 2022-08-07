@@ -1,2 +1,0 @@
-{"/home/portuga/tic-tac-toe/src/App.js": {"path":"/home/portuga/tic-tac-toe/src/App.js","statementMap":{"0":{"start":{"line":7,"column":2},"end":{"line":14,"column":4}}},"fnMap":{"0":{"name":"App","decl":{"start":{"line":6,"column":9},"end":{"line":6,"column":12}},"loc":{"start":{"line":6,"column":15},"end":{"line":15,"column":1}},"line":6}},"branchMap":{},"s":{"0":8},"f":{"0":8},"b":{},"_coverageSchema":"1a1c01bbd47fc00a2c39e90264f33305004495a9","hash":"e5f4c042dfc3014c56889b41144fea5390c08a97"}
-}
