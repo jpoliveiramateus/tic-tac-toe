@@ -7,15 +7,15 @@ function Result() {
     <footer>
       <div className={`${currentPlayer === 'X' && 'white'}  ${(winner || endGame) && 'white'}`}>
         <p>PLAYER1 (X)</p>
-        <p>{pointsP1}</p>
+        <p data-testid='points-p1'>{pointsP1}</p>
       </div>
       <div className={`${(winner || endGame) && 'white'}`}>
         <p>TIE</p>
-        <p>{tie}</p>
+        <p data-testid='points-tie'>{tie}</p>
       </div>
       <div className={`${currentPlayer === 'O' && 'white'}  ${(winner || endGame) && 'white'}`}>
         <p>PLAYER2 (O)</p>
-        <p>{pointsP2}</p>
+        <p data-testid='points-p2'>{pointsP2}</p>
       </div>
     </footer>
   );

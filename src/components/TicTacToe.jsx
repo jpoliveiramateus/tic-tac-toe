@@ -74,6 +74,7 @@ function TicTacToe() {
             key={ `square ${index}` }
             className={ `square ${index}` }
             onClick={ () => handleClick(index, square) }
+            data-testid={ `square ${index}` }
           >
             {square}
           </div>
