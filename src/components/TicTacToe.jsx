@@ -5,6 +5,7 @@ import Square from './Square';
 
 function TicTacToe() {
   const [game, setGame] = useState(Array(9).fill(''));
+  const [lineWin, setLineWin] = useState(null);
 
   const { currentPlayer, setCurrentPlayer, winner, setWinner,
     endGame, setEndGame, setPointsP1, setPointsP2, setTie } = useContext(TicTacToeContext);
@@ -25,10 +26,11 @@ function TicTacToe() {
       ];
       
       let win = false;
-      possibleWaysToWin.forEach((possible) => {
+      possibleWaysToWin.forEach((possible, index) => {
         if (possible.every((square) => square === 'X') || possible.every((square) => square === 'O')) {
           setWinner(true);
           win = true;
+          setLineWin(index);
         };
       });
 
@@ -36,6 +38,7 @@ function TicTacToe() {
       if (game.every((square) => square) && !win) {
         setTie((prevState) => prevState + 1);
         setEndGame(true);
+        setLineWin(false);
       }
     }
     checkWinner();
@@ -76,6 +79,7 @@ function TicTacToe() {
             index={ index }
             square={ square }
             handleClick={ handleClick }
+            lineWin={ lineWin }
           />
         );
       })}
