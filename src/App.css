@@ -6,6 +6,8 @@
 
   background-color: black;
   color: white;
+
+  font-family: sans-serif;
 }
 
 .game {
@@ -13,12 +15,11 @@
 
   justify-content: center;
   align-items: center;
-  text-align: center;
+  margin-top: 2rem;
 
   grid-template-columns: repeat(3, 100px);
   grid-template-rows: repeat(3, 100px);
   
-  height: auto;
   font-size : 90px;
 }
 
@@ -30,6 +31,9 @@
   height: 100px;
   width: 100px;
   border: 3px solid white;
+
+  font-variant: small-caps;
+  /* https://www.maujor.com/tutorial/propriedades-css-para-estilizacao-de-fontes.php */
 }
 
 .square:nth-child(1) {
@@ -84,6 +88,8 @@ footer div {
 
 footer div p:last-child {
   margin-top: -2px;
+  font-size: 1.4rem;
+  font-weight: 700;
 }
 
 .white {

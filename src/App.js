@@ -4,8 +4,10 @@ import './App.css';
 function App() {
   const [game, setGame] = useState(Array(9).fill(''));
   const [currentPlayer, setCurrentPlayer] = useState('X');
+
   const [winner, setWinner] = useState(false);
   const [endGame, setEndGame] = useState(false);
+
   const [pointsP1, setPointsP1] = useState(0);
   const [pointsP2, setPointsP2] = useState(0);
   const [tie, setTie] = useState(0);
@@ -24,21 +26,21 @@ function App() {
         [game[0], game[4], game[8]],
         [game[2], game[4], game[6]],
       ];
-  
+      
+      let win = false;
       possibleWaysToWin.forEach((possible) => {
-        if (possible.every((square) => square === 'X')) setWinner(true);
-        if (possible.every((square) => square === 'O')) setWinner(true);
+        if (possible.every((square) => square === 'X') || possible.every((square) => square === 'O')) {
+          setWinner(true);
+          win = true;
+        };
       });
-    }
-    checkWinner();
-    
-    const checkDraw = () => {
-      if (game.every((square) => square)) {
+
+      if (game.every((square) => square) && !win) {
         setTie((prevState) => prevState + 1);
         setEndGame(true);
       }
     }
-    checkDraw();
+    checkWinner();
   }, [game]);
 
   useEffect(() => {
@@ -57,7 +59,7 @@ function App() {
   const handleClick = (index, cell) => {
     if (!cell && !winner) {
       setGame(game.map((square, squareIndex) => squareIndex === index ? currentPlayer : square));
-      currentPlayer === 'X' ? setCurrentPlayer('O') : setCurrentPlayer('X');
+      setCurrentPlayer((prevState) => prevState === 'X' ? 'O' : 'X');
     }
 
     if (winner || endGame) {
