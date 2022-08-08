@@ -111,6 +111,14 @@ footer div p:last-child {
   cursor: pointer;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
+.not-allowed {
+  cursor: not-allowed;
+}
+
 @media (max-height: 320px) and (orientation: landscape) {
   .App {
     height: 100%;
