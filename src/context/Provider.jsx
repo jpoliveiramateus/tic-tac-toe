@@ -10,6 +10,8 @@ function Provider({ children }) {
   const [pointsP2, setPointsP2] = useState(0);
   const [tie, setTie] = useState(0);
 
+  const [onePlayer, setOnePlayer] = useState(false);
+
   const state = {
     currentPlayer,
     setCurrentPlayer,
@@ -23,6 +25,8 @@ function Provider({ children }) {
     setPointsP2,
     tie,
     setTie,
+    onePlayer,
+    setOnePlayer,
   }
 
   return (
