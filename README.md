@@ -5,10 +5,11 @@ Um simples jogo da velha criado com React, através dessa aplicação o usuário
 - Verificar a quantidade de pontos marcados para cada jogador.
 - Possibilidade em jogar contra o bot.
 
-![mobile (1)](https://user-images.githubusercontent.com/99822908/183657949-2f752569-c006-478c-bc83-d51a2f1056ca.gif)
-![mobile (2)](https://user-images.githubusercontent.com/99822908/183659823-5b6c5889-8b7a-4f95-85b5-5f410a677275.gif)
+![tic-tac-toe](https://user-images.githubusercontent.com/99822908/183678020-eb65c50e-6764-45ac-88a5-f6dae4f05fdd.gif)
 
-## Como executar:
+## Acesse em: https://tic-tac-toe-blush-sigma.vercel.app/
+
+## Como executar em sua máquina:
 
 ### 📋 Pré-requisitos
 
@@ -48,6 +49,7 @@ Testa todas as funcionalidades do jogo.
 ```
 npm test
 ```
+![Screenshot from 2022-08-09 11-34-38](https://user-images.githubusercontent.com/99822908/183678607-c6340827-788f-46de-8dd9-9cb980b2f0c9.png)
 
 ### ⌨️ Testes de cobertuba
 
@@ -67,26 +69,14 @@ npm run test-coverage
 * [Jest e React Testing Library](https://testing-library.com/) - É uma biblioteca usada para testar aplicativos React.
 * Mobile First - Metodologia usada que leva em consideração a usabilidade em dispositivos móveis primeiro.
 
-## 🖇️ Colaborando
+## 👨‍💻 Funções implementadas no jogo:
 
-Por favor, leia o [COLABORACAO.md](https://gist.github.com/usuario/linkParaInfoSobreContribuicoes) para obter detalhes sobre o nosso código de conduta e o processo para nos enviar pedidos de solicitação.
+- Contabilizador de pontos.
 
-## 📌 Versão
-
-Nós usamos [SemVer](http://semver.org/) para controle de versão. Para as versões disponíveis, observe as [tags neste repositório](https://github.com/suas/tags/do/projeto). 
-
-## ✒️ Autores
-
-Mencione todos aqueles que ajudaram a levantar o projeto desde o seu início
-
-* **Um desenvolvedor** - *Trabalho Inicial* - [umdesenvolvedor](https://github.com/linkParaPerfil)
-* **Fulano De Tal** - *Documentação* - [fulanodetal](https://github.com/linkParaPerfil)
-
-Você também pode ver a lista de todos os [colaboradores](https://github.com/usuario/projeto/colaboradores) que participaram deste projeto.
-
-## 📄 Licença
-
-Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE.md](https://github.com/usuario/projeto/licenca) para detalhes.
+<div style="display: flex">
+  <img src="" width="300" />
+  <img src="" width="300" />
+</div>
 
 ## 🎁 Expressões de gratidão
 
@@ -95,6 +85,5 @@ Este projeto está sob a licença (sua licença) - veja o arquivo [LICENSE.md](h
 * Obrigado publicamente 🤓.
 * etc.
 
-
 ---
-⌨️ com ❤️ por [Armstrong Lohãns](https://gist.github.com/lohhans) 😊
+⌨️ desenvolvido por [João Pedro Oliveira](https://www.linkedin.com/in/jo%C3%A3o-pedro-de-oliveira-mateus/) 😄
