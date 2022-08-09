@@ -40,6 +40,7 @@ function Square({ index, square, handleClick, lineWin }) {
       onClick={ () => handleClick(index, square) }
       data-testid={ `square ${index}` }
       style={ (!isGrey && (endGame || winner)) ? { color: 'gray' } : { color: 'white' } }
+      role={square ? 'full' : 'empty' }
     >
       {square}
     </div>

@@ -20,7 +20,11 @@ function Result() {
         {onePlayer ? <p>COMPUTER (O)</p> : <p>PLAYER2 (O)</p>}
         <p data-testid='points-p2'>{pointsP2}</p>
       </div>
-      <section className="player" onClick={() => { onePlayer ? setOnePlayer(false) : setOnePlayer(true)}}>
+      <section
+        className="player"
+        data-testid="player"
+        onClick={() => { onePlayer ? setOnePlayer(false) : setOnePlayer(true)}}
+      >
         {onePlayer ? (
           <>
             <FaUserAlt className="icon-player" />

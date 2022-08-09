@@ -33,11 +33,9 @@ function TicTacToe() {
 
   useEffect(() => {
     // clickBot
-    const handleClickBot = (index, cell) => {
-      if (!cell && !winner) {
-        setGame(game.map((square, squareIndex) => squareIndex === index ? currentPlayer : square));
-        setCurrentPlayer((prevState) => prevState === 'X' ? 'O' : 'X');
-      }
+    const handleClickBot = (index) => {
+      setGame(game.map((square, squareIndex) => squareIndex === index ? currentPlayer : square));
+      setCurrentPlayer((prevState) => prevState === 'X' ? 'O' : 'X');
   
       if (winner || endGame) {
         setGame(Array(9).fill(''));
@@ -76,7 +74,7 @@ function TicTacToe() {
       }
       const randomIndex = Math.floor(Math.random() * freePossibles.length);
       const randomPossible = Number(freePossibles[randomIndex]);
-      setTimeout(() => handleClickBot(randomPossible, ''), 500);
+      setTimeout(() => handleClickBot(randomPossible), 500);
     }
   }, [resetGame, currentPlayer, game, setWinner, winner, endGame, setCurrentPlayer, setEndGame]);
 

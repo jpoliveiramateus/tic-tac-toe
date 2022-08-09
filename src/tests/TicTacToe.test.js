@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import App from './App';
+import App from '../App';
 
 const ALL_HOUSES = 8;
 
-describe('test game tic-tac-toe', () => {
+describe('test game tic-tac-toe two players', () => {
   it('all houses start empty', () => {
     render(<App />);
 
@@ -24,18 +24,28 @@ describe('test game tic-tac-toe', () => {
     expect(screen.getByTestId('square 0')).toHaveTextContent('X');
   });
 
-  it('point is scored when player 1 wins', () => {
+  it('point is scored when player 1 wins and highlights the line', () => {
     render(<App />);
 
     expect(screen.getByTestId('points-p1')).toHaveTextContent('0');
     expect(screen.getByTestId('points-p2')).toHaveTextContent('0');
     expect(screen.getByTestId('points-tie')).toHaveTextContent('0');
 
+    for(let i = 0; i <= ALL_HOUSES; i += 1) {
+      expect(screen.getByTestId(`square ${i}`)).toHaveStyle('color: white');
+    }
+
     userEvent.click(screen.getByTestId('square 0'));
     userEvent.click(screen.getByTestId('square 1'));
     userEvent.click(screen.getByTestId('square 3'));
     userEvent.click(screen.getByTestId('square 4'));
     userEvent.click(screen.getByTestId('square 6'));
+
+    expect(screen.getByTestId(`square 0`)).toHaveStyle('color: white');
+    expect(screen.getByTestId(`square 1`)).toHaveStyle('color: gray');
+    expect(screen.getByTestId(`square 3`)).toHaveStyle('color: white');
+    expect(screen.getByTestId(`square 4`)).toHaveStyle('color: gray');
+    expect(screen.getByTestId(`square 6`)).toHaveStyle('color: white');
 
     expect(screen.getByTestId('points-p1')).toHaveTextContent('1');
     expect(screen.getByTestId('points-p2')).toHaveTextContent('0');
@@ -61,17 +71,25 @@ describe('test game tic-tac-toe', () => {
     expect(screen.getByTestId('points-tie')).toHaveTextContent('0');
   });
 
-  it('point is scored in the tie', () => {
+  it('point is scored in the tie and all squares are gray', () => {
     render(<App />);
 
     expect(screen.getByTestId('points-p1')).toHaveTextContent('0');
     expect(screen.getByTestId('points-p2')).toHaveTextContent('0');
     expect(screen.getByTestId('points-tie')).toHaveTextContent('0');
 
+    for(let i = 0; i <= ALL_HOUSES; i += 1) {
+      expect(screen.getByTestId(`square ${i}`)).toHaveStyle('color: white');
+    }
+
     const draw = [0, 1, 3, 4, 7, 6, 2, 5, 8];
     draw.forEach((index) => {
       userEvent.click(screen.getByTestId(`square ${index}`));
     });
+
+    for(let i = 0; i <= ALL_HOUSES; i += 1) {
+      expect(screen.getByTestId(`square ${i}`)).toHaveStyle('color: gray');
+    }
 
     expect(screen.getByTestId('points-p1')).toHaveTextContent('0');
     expect(screen.getByTestId('points-p2')).toHaveTextContent('0');
@@ -201,10 +219,24 @@ describe('test game tic-tac-toe', () => {
     expect(screen.getByTestId('points-p2')).toHaveTextContent('0');
     expect(screen.getByTestId('points-tie')).toHaveTextContent('0');
 
+    for(let i = 0; i <= ALL_HOUSES; i += 1) {
+      expect(screen.getByTestId(`square ${i}`)).toHaveStyle('color: white');
+    }
+
     const winOnTheLastMove = [0, 1, 3, 4, 7, 2, 5, 8, 6];
     winOnTheLastMove.forEach((index) => {
       userEvent.click(screen.getByTestId(`square ${index}`));
     });
+
+    expect(screen.getByTestId(`square 0`)).toHaveStyle('color: white');
+    expect(screen.getByTestId(`square 1`)).toHaveStyle('color: gray');
+    expect(screen.getByTestId(`square 2`)).toHaveStyle('color: gray');
+    expect(screen.getByTestId(`square 3`)).toHaveStyle('color: white');
+    expect(screen.getByTestId(`square 4`)).toHaveStyle('color: gray');
+    expect(screen.getByTestId(`square 5`)).toHaveStyle('color: gray');
+    expect(screen.getByTestId(`square 6`)).toHaveStyle('color: white');
+    expect(screen.getByTestId(`square 7`)).toHaveStyle('color: gray');
+    expect(screen.getByTestId(`square 8`)).toHaveStyle('color: gray');
 
     expect(screen.getByTestId('points-p1')).toHaveTextContent('1');
     expect(screen.getByTestId('points-p2')).toHaveTextContent('0');
