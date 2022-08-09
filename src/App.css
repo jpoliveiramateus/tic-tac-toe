@@ -17,10 +17,10 @@
   align-items: center;
   margin-top: 2rem;
 
-  grid-template-columns: repeat(3, 100px);
-  grid-template-rows: repeat(3, 100px);
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
   
-  font-size : 90px;
+  font-size : 70px;
 }
 
 .square {
@@ -28,8 +28,8 @@
   align-items: center;
   justify-content: center;
 
-  height: 100px;
-  width: 100px;
+  height: 80px;
+  width: 80px;
   border: 3px solid white;
 
   font-variant: small-caps;
@@ -78,6 +78,8 @@ footer {
 
   gap: 1rem;
   color: #808080;
+
+  font-size: 0.8rem;
 }
 
 footer div {
@@ -92,7 +94,7 @@ footer div:first-child {
 
 footer div p:last-child {
   margin-top: -2px;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 700;
 }
 
@@ -119,7 +121,7 @@ footer div p:last-child {
   cursor: pointer;
 }
 
-@media (max-height: 320px) and (orientation: landscape) {
+@media (max-height: 626px) and (orientation: landscape) {
   .App {
     height: 100%;
   }
@@ -145,7 +147,7 @@ footer div p:last-child {
     grid-template-columns: repeat(3, 110px);
     grid-template-rows: repeat(3, 110px);
     
-    font-size : 110px;
+    font-size : 100px;
   }
 
   footer {
@@ -167,7 +169,7 @@ footer div p:last-child {
     grid-template-columns: repeat(3, 120px);
     grid-template-rows: repeat(3, 120px);
     
-    font-size : 120px;
+    font-size : 110px;
   }
 
   footer {
