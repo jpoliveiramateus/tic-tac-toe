@@ -1,6 +1,12 @@
 # Projeto Tic-Tac-Toe 🎮
 
-Um simples jogo da velha criado com React.
+Um simples jogo da velha criado com React, através dessa aplicação o usuário é capaz de:
+
+- Verificar a quantidade de pontos marcados para cada jogador.
+- Possibilidade em jogar contra o bot.
+
+![mobile (1)](https://user-images.githubusercontent.com/99822908/183657949-2f752569-c006-478c-bc83-d51a2f1056ca.gif)
+![mobile (2)](https://user-images.githubusercontent.com/99822908/183659823-5b6c5889-8b7a-4f95-85b5-5f410a677275.gif)
 
 ## Como executar:
 
@@ -43,7 +49,7 @@ Testa todas as funcionalidades do jogo.
 npm test
 ```
 
-### ⌨️ E testes de cobertuba
+### ⌨️ Testes de cobertuba
 
 Verifica a % de cobertura da aplicação.
 
@@ -51,11 +57,15 @@ Verifica a % de cobertura da aplicação.
 npm run test-coverage
 ```
 
-## 🛠️ Construído com
+## 🛠️ Ferramentas & Metodologias Utilizadas
 
-Ferramentas usadas para criar o projeto:
-
-* [React](https://pt-br.reactjs.org/) - Biblioteca usada
+* HTML5 - Linguagem de marcação de hipertexto para apresentar e estruturar o conteúdo na web.
+* CSS3 - é a terceira mais nova versão das famosas Cascading Style Sheets (ou simplesmente CSS), pela qual se define estilos para um projeto web (página de internet).
+* JavaScript ES6 - Linguagem de programação.
+* [React](https://pt-br.reactjs.org/) - Uma biblioteca JavaScript para criar interfaces de usuário.
+* [Context](https://pt-br.reactjs.org/docs/context.html) - foi usado para compartilhar dados que podem ser considerados “globais” para a árvore de componentes do React.
+* [Jest e React Testing Library](https://testing-library.com/) - É uma biblioteca usada para testar aplicativos React.
+* Mobile First - Metodologia usada que leva em consideração a usabilidade em dispositivos móveis primeiro.
 
 ## 🖇️ Colaborando
 
