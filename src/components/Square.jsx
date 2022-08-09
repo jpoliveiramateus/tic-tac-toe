@@ -36,7 +36,7 @@ function Square({ index, square, handleClick, lineWin }) {
 
   return (
     <div
-      className={ `square ${index} ${square ? 'not-allowed' : 'pointer'}` }
+      className={ `square ${index} ${square ? 'not-allowed' : 'pointer'} ${(winner || endGame) && 'pointer'}` }
       onClick={ () => handleClick(index, square) }
       data-testid={ `square ${index}` }
       style={ (!isGrey && (endGame || winner)) ? { color: 'gray' } : { color: 'white' } }
