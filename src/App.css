@@ -125,7 +125,39 @@ footer div p:last-child {
   }
 }
 
-@media (min-width: 375px) {
+@media (min-width: 320px) {
+  footer {
+    font-size: 0.9rem;
+  }
+
+  footer div p:last-child {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 360px) {
+  .square {
+    height: 110px;
+    width: 110px;
+  }
+
+  .game {
+    grid-template-columns: repeat(3, 110px);
+    grid-template-rows: repeat(3, 110px);
+    
+    font-size : 110px;
+  }
+
+  footer {
+    font-size: 1rem;
+  }
+
+  footer div p:last-child {
+    font-size: 1.8rem;
+  }
+}
+
+@media (min-width: 390px) {
   .square {
     height: 120px;
     width: 120px;
@@ -135,11 +167,11 @@ footer div p:last-child {
     grid-template-columns: repeat(3, 120px);
     grid-template-rows: repeat(3, 120px);
     
-    font-size : 110px;
+    font-size : 120px;
   }
 
   footer {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
   footer div p:last-child {
@@ -147,7 +179,7 @@ footer div p:last-child {
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 600px) {
   .square {
     height: 150px;
     width: 150px;
