@@ -128,11 +128,12 @@ function TicTacToe() {
   }, [winner, currentPlayer, setPointsP1, setPointsP2]);
 
   const handleClick = (index, cell) => {
-    if (!cell && !winner) {
-      setGame(game.map((square, squareIndex) => squareIndex === index ? currentPlayer : square));
-      setCurrentPlayer((prevState) => prevState === 'X' ? 'O' : 'X');
+    if (!onePlayer || currentPlayer === 'X') {
+      if (!cell && !winner) {
+        setGame(game.map((square, squareIndex) => squareIndex === index ? currentPlayer : square));
+        setCurrentPlayer((prevState) => prevState === 'X' ? 'O' : 'X');
+      }
     }
-
     if (winner || endGame) {
       setGame(Array(9).fill(''));
       setWinner(false);
