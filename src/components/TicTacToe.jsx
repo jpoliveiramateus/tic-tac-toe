@@ -36,12 +36,6 @@ function TicTacToe() {
     const handleClickBot = (index) => {
       setGame(game.map((square, squareIndex) => squareIndex === index ? currentPlayer : square));
       setCurrentPlayer((prevState) => prevState === 'X' ? 'O' : 'X');
-  
-      if (winner || endGame) {
-        setGame(Array(9).fill(''));
-        setWinner(false);
-        setEndGame(false);
-      }
     }
 
     // checkWinner
