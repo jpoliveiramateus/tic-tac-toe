@@ -44,12 +44,12 @@ http://localhost:3000/
 
 ### 🔩 Analise os testes de ponta a ponta
 
-Testa todas as funcionalidades do jogo.
+Testa todas as funcionalidades do jogo 1v1.
 
 ```
 npm test
 ```
-![Screenshot from 2022-08-09 21-16-52](https://user-images.githubusercontent.com/99822908/183784097-4a07d835-9d80-4633-85ed-a344227ebedc.png)
+![Screenshot from 2022-08-09 22-01-15](https://user-images.githubusercontent.com/99822908/183787738-b7072f25-3367-4e76-85bc-46e9479d5f93.png)
 
 ### ⌨️ Testes de cobertuba
 
@@ -58,7 +58,7 @@ Verifica a % de cobertura da aplicação.
 ```
 npm run test-coverage
 ```
-![Screenshot from 2022-08-09 21-16-21](https://user-images.githubusercontent.com/99822908/183784110-87eeabe7-07cc-4549-9387-ac5624e3e3e1.png)
+![Screenshot from 2022-08-09 22-01-01](https://user-images.githubusercontent.com/99822908/183787765-c9403521-79fe-437d-a4ef-e41bc2921fec.png)
 
 ## 🛠️ Ferramentas & Metodologias Utilizadas
 
